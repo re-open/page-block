@@ -1,6 +1,6 @@
 {
   "name": "page-block",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web app architecture to work with pages and blocks",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/re-open/page-block/issues"
   },
-  "homepage": "https://github.com/re-open/page-block#readme"
+  "homepage": "https://github.com/re-open/page-block#readme",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "q": "^1.4.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mockery": "^1.4.0",
+    "should": "^8.2.1",
+    "simock": "^0.1.1"
+  }
 }
