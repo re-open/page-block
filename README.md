@@ -16,9 +16,11 @@ A big web application becomes messy in express very soon. Because
 
 *Load the library*
   PageBlock = require('page-block')
+  
 *Instantiate and use as a middleware in express*
 The page-block library will expose a function that will take a single parameter. An array of source directories from where page-block library can load controllers and views.
   app = express()
   app.use(PageBlock(['.']))
+  
 *Create a controller*
 The controllers for pages will be loaded from `controllers/pages` from all the source directories. It uses explicit routing. That means if there is a controller `index.js` that will be used to serve route `/`. 
