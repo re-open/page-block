@@ -1,6 +1,6 @@
 {
   "name": "page-block",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web app architecture to work with pages and blocks",
   "main": "index.js",
   "scripts": {

@@ -2,7 +2,7 @@ Mapper = require './index'
 
 class ViewMapper extends Mapper
   constructor: (srcDirs, viewType) ->
-    super(srcDirs: srcDirs, postfix: "views/#{viewType}", acceptedExts:['.mustache','.html'])
+    super(srcDirs: srcDirs, postfix: "views/#{viewType}", acceptedExts:['.hbs','.html'])
 
   loadList: (list)->
     @items = []

@@ -41,10 +41,12 @@ class View
     return Q({}) if blocks.length < 1
 
     Q.all(promises).then((rendered)=>
+
       retval = {}
       idx = 0
       for block in blocks
-        retval[block.path] = rendered[idx++]
+        key = block.path + "-" + block.args.join(':')
+        retval[key] = rendered[idx++]
       return retval
     )
 
