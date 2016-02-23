@@ -10,7 +10,8 @@ module.exports = (srcDirs)->
 
   Block::init(srcDirs)
   View::init(srcDirs)
-  
+
+
   return pageMapper.serve
 
 module.exports.Page  = require './lib/page'

@@ -6,6 +6,21 @@ Mapper = require '../mapper'
 Block = require '../block'
 
 RenderEngine = {
+  init:(srcDirs)->
+    vhMapper = new Mapper(
+      srcDirs:srcDirs, 
+      postfix: 'util/view-helpers', 
+      acceptedExts: ['.js','.coffee']
+    )
+
+    vhMapper.preload().then(->
+      for item in vhMapper.items
+        require(item)(Handlebars)
+    ).fail((e)->
+      console.log e
+    )
+
+
   parseBlocks: (template)->
     parsed = Handlebars.parse(template)
     blocks = []

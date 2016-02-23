@@ -6,7 +6,6 @@ Q = require 'q'
 class PageMapper extends Mapper
   constructor: (srcDirs) ->
     super(srcDirs:srcDirs, postfix:"controllers/pages", acceptedExts: ['.js','.coffee','.json'])
-    View::init(srcDirs)
 
   serve:(req, res, next)=>
     return @serveWait(res) unless @preloadComplete

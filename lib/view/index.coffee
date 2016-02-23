@@ -54,7 +54,7 @@ class View
 View::init = (srcDirs)->
   blockViews = new ViewMapper(srcDirs, 'blocks')
   pageViews = new ViewMapper(srcDirs, 'pages')
-
+  RenderEngine.init(srcDirs)
   Q.all([
     blockViews.preload(),
     pageViews.preload()
