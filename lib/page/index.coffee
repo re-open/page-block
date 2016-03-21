@@ -19,7 +19,7 @@ class Page
     ).then((rendered)=>
       res.end(rendered)
     ).fail((e)->
-      console.log e.stack
+      next(e)
       throw e
     )
 
